@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "166983834097",
+    "project_id": "hang-a9d15"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166983834097:android:519f3816663368c4",
+        "android_client_info": {
+          "package_name": "com.mohammadsharif.hang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeXZDeAwMHpEU3V68YtnMmmCnWom-FnL8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-54515144-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
