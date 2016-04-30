@@ -1,6 +1,7 @@
 package mohammadsharif.com.hang;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,17 +37,21 @@ public class MainActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = this.getSupportActionBar();
+        actionBar.hide();
         //Initializes the Facebook SDK allowing for use of the Facebook login within the app
         AppEventsLogger.activateApp(this);
         //Creates the callback manager
         callbackManager = CallbackManager.Factory.create();
         info = (TextView)findViewById(R.id.infotext_login);
         loginButton = (LoginButton)findViewById(R.id.login_button);
+        loginButton.setReadPermissions("user_education_history");
 
         //Creates an access token providing secure access
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         if(accessToken == null){
             loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
                 @Override
                 public void onSuccess(LoginResult loginResult) {
                     info.setText("User ID: "
