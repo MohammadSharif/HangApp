@@ -46,6 +46,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".PostHang" />
+        <activity android:name=".MapsActivity"/>
         <activity android:name=".fakemap"></activity>
     </application>
 
