@@ -2,4 +2,6 @@
     <string name="app_name">Hang</string>
     <string name="facebook_app_id">1531217480518608</string>
     <string name="title_activity_maps">Map</string>
+    <string name="leave_feedback_optional">Leave feedback? (Optional)</string>
+    <string name="how_was_your_hang">How was your Hang?</string>
 </resources>
