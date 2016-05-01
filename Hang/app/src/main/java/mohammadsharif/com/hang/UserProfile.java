@@ -1,5 +1,6 @@
 package mohammadsharif.com.hang;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -7,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import mohammadsharif.com.hang.DownloadImageTask;
@@ -29,6 +32,7 @@ public class UserProfile extends AppCompatActivity {
     private TextView nameView;
     private TextView schoolView;
     private ImageView profilePhoto;
+    private Button startHanging;
     private String asString;
     public UserProfile() {
         GraphRequest request = GraphRequest.newMeRequest(
@@ -100,6 +104,15 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.profile_page);
         nameView = (TextView)findViewById(R.id.name_view);
         nameView.setText(name);
+        startHanging = (Button)findViewById(R.id.hangbutton);
+        startHanging.setText("Ready to hang?");
+        startHanging.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start = new Intent(UserProfile.this, MapsActivity.class);
+                startActivity(start);
+            }
+        });
 
 
 

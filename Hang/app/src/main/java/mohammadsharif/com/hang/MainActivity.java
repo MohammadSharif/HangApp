@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onSuccess(LoginResult loginResult) {
-                    info.setText("User ID: "
-                            + loginResult.getAccessToken().getUserId()
-                            + "\n" +
-                            "Auth Token: "
-                            + loginResult.getAccessToken().getToken()
-                    );
+//                    info.setText("User ID: "
+//                            + loginResult.getAccessToken().getUserId()
+//                            + "\n" +
+//                            "Auth Token: "
+//                            + loginResult.getAccessToken().getToken()
+//                    );
 
                     Intent userProfile = new Intent(MainActivity.this, UserProfile.class);
                     if(!isUserProfileStarted) {
